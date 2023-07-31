@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Titulo;
+    src: url(../assets/fonts/brasika-display-trial.otf);
+}
+
+@font-face {
+    font-family: font;
+    src: url(../assets/fonts/TheDough_DEMO.ttf);
+}
+
+:root{
+    --color-cafe-oscuro: #652C1D;
+    --color-cafe-neutro: #A9765B;
+    --color-cafe-naranja:#C46434;
+    --color-crema:       #ECBC94;
+    --color-cafe-gris:   #D8C5B9;
+    --color-gris-claro:  #F6F6F6;
+    --color-fondo-logo:  #F4ECE2;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--color-gris-claro);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Header principal */
+.primero{
+    background-color: var(--color-cafe-gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 28px;
+    margin: 20px;
+    padding: 5px 25px 5px 25px;
+}
+.buscador{
+    background-color: var(--color-gris-claro);
+    border-radius: 30px;
+    width: 330px;
+}
+.buscador input{
+    width: 300px;
+    border: none;
+    padding: 2px;
+    border-radius: 30px;
+    background-color: var(--color-gris-claro);
+    padding-left: 10px ;
+}
+.titulo{
+    font-family: titulo;
+}
+
+.buscador button{
+    border: none;
+    background-color: transparent;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+}
+
+.icons button{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+/* -----nav------- */
+nav{
+    width: 100%;
+   
+}
+.ulLinks{
+    display: flex;
+    gap: 200px;
+    border-bottom: 1.5px solid black !important;
+    margin: 0 150px 0 150px;
+    justify-content: space-evenly;
+}
+li {
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
