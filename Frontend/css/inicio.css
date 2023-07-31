@@ -3,16 +3,99 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Titulo;
+    src: url(../assets/fonts/brasika-display-trial.otf);
+}
+
+@font-face {
+    font-family: font;
+    src: url(../assets/fonts/TheDough_DEMO.ttf);
+}
+
 :root{
     --color-cafe-oscuro: #652C1D;
     --color-cafe-neutro: #A9765B;
     --color-cafe-naranja:#C46434;
     --color-crema:       #ECBC94;
     --color-cafe-gris:   #D8C5B9;
-    --gris-claro:        #F6F6F6;
+    --color-gris-claro:  #F6F6F6;
+    --color-fondo-logo:  #F4ECE2;
 }
 
 body{
     height: 100vh;
     background-color: var(--color-cafe-gris) !important;
+    display: grid;
+    place-items: center;
 }
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio img{
+    margin-left: 15px;
+    height: 300px;
+    width: 400px;
+}
+
+h1{
+    font-family: titulo;
+    font-size: 100px !important;
+}
+.btnContainer {
+    /* Appearance */
+    background:var(--color-cafe-gris);
+    box-shadow: 6px 6px 16px #bebebe,
+               -6px -6px 16px #ffffff9a;
+  /* Dimensions */
+    width: 160px;
+    height: 60px;
+  /* Border */
+    border: none;
+    border-radius: 16px;
+  /* Content Aligment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    /* Appearance */
+    background: var(--color-fondo-logo);
+    /* Font-Style */
+    font-family: font;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-cafe-oscuro);
+    /* Dimensions */
+    height: 85%;
+    width: 95%;
+    /* Border */
+    border: none;
+    border-radius: 14px;
+    /* Transition */
+    transition: all 250ms ease-in-out;
+  }
+  
+  .button:hover {
+    /* Appearance */
+    background: var(--color-fondo-logo);
+    box-shadow: inset 5px 5px 4px #c0c0c0,
+                inset -5px -5px 4px #dddddd;
+    
+  }
+
+  .button a{
+    text-decoration: none;
+    /* Font-Style */
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--color-cafe-oscuro);
+  }
+  
+  
