@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-cafe-oscuro: #652C1D;
+    --color-cafe-neutro: #A9765B;
+    --color-cafe-naranja:#C46434;
+    --color-crema:       #ECBC94;
+    --color-cafe-gris:   #D8C5B9;
+    --gris-claro:        #F6F6F6;
+}
+
+body{
+    height: 100vh;
+    background-color: red;
+}
