@@ -117,8 +117,9 @@ main{
 }
 .carousel-inner img{
     height: 618px;
-    width: 900px;
+    width: auto;
 }
+
 .text{
     width: auto;
     margin: 20px 0 0 100px ;
@@ -138,8 +139,81 @@ main{
 .bolsillo{
     color:#265636;
 }
+.botonesSesion{
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: end;
+}
+.btnRegistrar , .btnSesion{
+    background-color: var(--color-crema) !important;
+    color: var(--color-cafe-oscuro) !important;
+}
 
+/* Slider 2 */
 
+.slider2{
+    display: flex !important;
+    background-color: #E6D3C4;
+}
+
+.imgSl2{
+    display: flex;
+    justify-content: end;
+    width: 40%;
+}
+.textSl2{
+    background-color: #628C84;
+    width: 60%;
+    padding: 50px;
+}
+
+.textSl2 h2{
+    font-family: font;
+    font-size: 70px;
+    color: #ffff;
+    line-height: 1.7;
+}
+
+/*  Slider 3  */
+
+.slider3{
+    background-image: url(../assets/imgs/all/opcion2.webp);
+    height: 618px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0 0 98px;
+    display: flex !important;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.slider3 h3{
+    font-family: font;
+    font-size: 70px;
+    line-height: 1.3;
+}
+
+.infoSl3{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.infoSl3 p{
+    font-size: 20px;
+    color: #628C84;
+    font-weight: bold;
+}
+
+.infoSl3 a{
+    text-decoration: none;
+    color: var(--color-cafe-naranja);
+    padding-bottom: 16px;
+
+}
 
 
 /* -----footer---- */
