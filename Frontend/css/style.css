@@ -458,3 +458,21 @@ main section{
 .acneImg h2{
     font-family: font;
 }
+/* ---categorias--- */
+
+.mainCategorias{
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.sectionCategorias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sectionCategorias div{
+    height: 200px;
+    width: 200px;
+}
+
