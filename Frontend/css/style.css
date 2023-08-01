@@ -476,3 +476,10 @@ main section{
     width: 200px;
 }
 
+/* --nosotros */
+
+.nosotrosImg h1{
+    font-family: titulo;
+    text-align: center;
+    font-size: 80px;
+}
