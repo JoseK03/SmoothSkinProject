@@ -107,3 +107,147 @@ li a{
     padding: 7px 10px 0 10px;
     border-radius:  70px 70px 0 0;
 }
+
+
+/* main */
+
+.mainProductos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada{
+    padding: 20px;
+}
+
+.sectionProductos{
+    display: grid;
+    place-items: center;
+}
+
+.caja{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    gap: 50px; 
+}
+
+/* tarjetas */
+
+.tarjeta{
+    height: 300px;
+    width: 200px;
+    border: 2px solid #D7E6F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tarjeta a{
+    text-decoration: none;
+}
+
+.tarjeta img{
+    height: 170px;
+    width: 170px;
+    margin-bottom: 50px;
+}
+
+.infoTarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.infoTarjeta h6{
+    font-family: font;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* css producto individual */
+
+.mainProducto{
+    display: flex;
+    flex-direction: column;
+}
+
+.logoPequeño{
+    height: 50px;
+    margin: 20px;
+    padding-left: 100px;
+}
+
+.logoPequeño img{
+    height: 100%;
+}
+
+.sectionProducto{
+    display: flex;
+    padding: 20px 150px 0 100px;
+    gap: 80px;
+}
+
+.imgProducto{
+    border-radius: 100% ;
+    border: 4px solid #D7E6F8 !important;
+    padding: 40px;
+    height: 100%;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.informacion h1{
+    border-bottom: 2px solid #D7E6F8;
+    font-family: font;
+    padding: 15px;
+}
+
+.informacion p{
+    width: 70%;
+}
+
+.mejorPrecio, .droguerias{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mejorPrecio h5{
+    margin: 0;
+}
+
+.mejorPrecio img , .droguerias img{
+    height: 20px;
+    width: auto;
+}
+.accordion-collapse{
+    width: 200px;
+}
+
+.opcionesDroguerias{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.droguerias{
+    border: none;
+    background-color: transparent;
+}
+
+.linkCompra{
+    text-decoration: none;
+    color: black;
+    border: 2px solid #A9765B;
+    padding: 5px;
+}

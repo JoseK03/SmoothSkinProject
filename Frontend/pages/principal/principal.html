@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Skin</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e645fa77c6.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href=".../../assets/imgs/logos/ico.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <section class="primero">
+            <div class="titulo">
+                <h1>Smooth Skin</h1>
+            </div>
+            <div class="buscador">
+                <input type="text" class="fa-solid fa-magnifying-glass" placeholder="Search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="icons">
+                <button><i class="fa-regular fa-user"></i></i></button>
+                <button><i class="fa-brands fa-shopify"></i></button>
+            </div>
+        </section>
+        <nav>
+            <ul class="ulLinks">
+                <li class="home"><a href="../principal/principal.html">Home</a></li>
+                <li><a href="../shop/shop.html">Shop</a></li>
+                <li><a href="../preocupaciones/preocupaciones.html">Preocupaciones</a></li>
+                <li><a href="../categorias/categorias.html">Categorias</a></li>
+                <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Carrusel -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active slider1">
+                <div class="text">
+                    <h2>Cuidamos <br>tu <span class="piel"> piel</span>, <br> cuidamos <br> tu <span class="bolsillo">bolsillo</span>... </h2>
+                    <div class="botonesSesion">
+                        <button type="button" class="btn btnRegistrar" data-bs-toggle="modal" data-bs-target="#registrarseModal" data-bs-whatever="@mdo"><strong>Registrarse</strong></button>
+                        <button type="button" class="btn btnSesion" data-bs-toggle="modal" data-bs-target="#inicioSesionModal" data-bs-whatever="@mdo"><strong>Iniciar Sesion</strong></button>
+                    </div>
+                </div>
+                <img src="../../assets/imgs/all/carrito.webp" class="slider1img" alt="...">
+              </div>
+              <div class="carousel-item slider2">
+                <div class="imgSl2">
+                  <img src="../../assets/imgs/all/slider1.jpg" class="slider2img" alt="SmoothSkin image">
+                </div>
+                <div class="textSl2">
+                  <h2>Encuentra tus <br> productos favoritos <br> entre multiples <br> tiendas y marcas</h2>
+                </div>
+              </div>
+              <div class="carousel-item slider3" >
+                <h3>¿Querer <br> empezar <br> pero no saber <br> por donde?</h3>
+                <div class="infoSl3">
+                  <p>No te preocupes, podemos ayudarte</p>
+                  <a href="#"><strong>Ver más</strong></a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <section class="footer">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+            <div class="img4"></div>
+            <div class="img5"></div>
+            <div class="img6"></div>
+            <div class="img7"></div>
+        </section>
+    </footer>
+
+    <!-- Modal botones de inicio sesio -->
+    <div class="modal fade" id="registrarseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal boton iniciar sesion -->
+
+
+<div class="modal fade" id="inicioSesionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
