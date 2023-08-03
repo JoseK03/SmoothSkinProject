@@ -10,7 +10,7 @@ const productoSchema = mongoose.Schema({
         required:true
     },
     descripcion:{
-        trype: String,
+        type: String,
         required: true
     },
     usos:{
@@ -27,7 +27,7 @@ const productoSchema = mongoose.Schema({
     }
     },
     {
-        timesStamps: true
+        timestamps: true
     });
 
     const Productos = mongoose.model("productos",productoSchema,"productos");
