@@ -3,6 +3,7 @@ import cors from "cors";
 import productosRouter from "../routes/productos.routes.js";
 import marcaRouter from "../routes/marcas.routes.js";
 import drogueriasRouter from "../routes/droguerias.routes.js";
+import categoriasRouter from "../routes/categorias.routes.js";
 
 class Server{
 
@@ -12,7 +13,8 @@ class Server{
         this.port = process.env.PORT;
         this.productosPath = "/api/productos";
         this.marcaPath = "/api/marcas";
-        this.drogueriasPath = "/api/droguerias"
+        this.drogueriasPath = "/api/droguerias";
+        this.categoriasPath = "/api/categorias";
         this.middlewares();
         this.routes();
     }
@@ -27,6 +29,7 @@ class Server{
         this.app.use(this.productosPath,productosRouter);
         this.app.use(this.marcaPath,marcaRouter);
         this.app.use(this.drogueriasPath,drogueriasRouter);
+        this.app.use(this.categoriasPath,categoriasRouter);
 
     }
 
