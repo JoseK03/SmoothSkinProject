@@ -13,7 +13,7 @@ async function mostrarProductos() {
             const precioMasEconomico = Math.min(...precios.map(precio => precio.valor));
             bodycard.innerHTML += `
                 <div class="tarjeta">
-                    <a href="./acidoHyaluronico.html">
+                    <a href="./productoDetallado.html">
                         <img src="../../../assets/imgs/ordinary/${imagen}"  alt="Imagen de piel suave">
                     <div class="infoTarjeta">
                         <h6>${nombre_producto}</h6>
