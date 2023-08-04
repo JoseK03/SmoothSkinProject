@@ -7,7 +7,7 @@ const router = Router();
 
 router.get("/get",getCategorias);
 router.post("/add",postCategoria);
-router.delete("/del",deleteCategoria);
-router.patch("/upd",updateCategorias);
+router.delete("/del/:id",deleteCategoria);
+router.patch("/upd/:id",updateCategorias);
 
 export default router;

@@ -2,11 +2,20 @@ import { getProductos, getOneProducto , postProductos , deleteProductos , update
 import {Router} from "express";
 import {check} from "express-validator";
 import validateDocuments from '../middlewares/validate.documents.js';
+import Marca from '../models/Marca.js';
 
 const router = Router();
 
 router.get("/get", getProductos);
-router.post("/add", postProductos);
+router.post("/add",[
+    check('nombre_producto','el nombre es obligatorio').not().isEmpty(),
+    check('descripcion','la descripcion es obligatoria').not().isEmpty(),
+    check('nombre_marca').custom(async(marca='')=>{
+        const existeMarca = await Marca.findOne({nombre_marca});
+        if(!existeMarca){
+            throw new Error(`La marca ${nombre_marca} no está registrada en la base de datos`)
+        }
+    }),validateDocuments], postProductos);
 router.delete("/del", deleteProductos);
 router.patch("/upd", updateProducto);
 
