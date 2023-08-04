@@ -8,14 +8,16 @@ const router = Router();
 
 router.get("/get", getProductos);
 router.post("/add",[
-    check('nombre_producto','el nombre es obligatorio').not().isEmpty(),
-    check('descripcion','la descripcion es obligatoria').not().isEmpty(),
-    check('nombre_marca').custom(async(marca='')=>{
+    check('nombre_producto','nombre es requierido').not().isEmpty(),
+    check('nombre_marca').custom(async(nombre_marca='')=>{
         const existeMarca = await Marca.findOne({nombre_marca});
         if(!existeMarca){
             throw new Error(`La marca ${nombre_marca} no está registrada en la base de datos`)
         }
-    }),validateDocuments], postProductos);
+    }),
+    check('categoria').custom(),
+    validateDocuments], postProductos);
+
 router.delete("/del", deleteProductos);
 router.patch("/upd", updateProducto);
 
