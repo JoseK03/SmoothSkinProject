@@ -13,8 +13,10 @@ export async function getAllProductos(){
 
 export async function getOneProducto(marca){
     try {
-        const ciclistar = await fetch(`${urlProductos}/`)
+        const marcaproducto = await fetch(`${urlProductos}/one/${marca}`);
+        console.log(marcaproducto);
+        return marcaproducto.json()
     } catch (error) {
-        
+        console.log(error);
     }
 }
