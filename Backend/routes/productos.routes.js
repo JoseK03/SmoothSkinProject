@@ -3,6 +3,7 @@ import {Router} from "express";
 import {check} from "express-validator";
 import validateDocuments from '../middlewares/validate.documents.js';
 import Marca from '../models/Marca.js';
+import Categorias from '../models/Categorias.js';
 
 const router = Router();
 
@@ -15,7 +16,12 @@ router.post("/add",[
             throw new Error(`La marca ${nombre_marca} no está registrada en la base de datos`)
         }
     }),
-    check('categoria').custom(),
+    check('categoria').custom(async(nombre='')=>{
+        const existeCategoria = await Categorias.findOne({nombre});
+        if(!existeCategoria){
+            throw new Error(`La categoria ${nombre} no esta registrada en la base de datos`)
+        }
+    }),
     validateDocuments], postProductos);
 
 router.delete("/del", deleteProductos);
