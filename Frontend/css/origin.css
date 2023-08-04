@@ -146,14 +146,27 @@ li a{
     border-radius: 10px;
 }
 
-.tarjeta a{
+
+
+.tarjeta a , .tarjetaAvene a{
     text-decoration: none;
 }
 
-.tarjeta img{
+.tarjeta img ,.tarjetaAvene img{
     height: 170px;
     width: 170px;
     margin-bottom: 50px;
+}
+
+.tarjetaAvene{
+    height: 300px;
+    width: 200px;
+    border: 2px solid #809F99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .infoTarjeta{

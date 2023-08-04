@@ -14,6 +14,15 @@ const getOneProducto = async (req,res) =>{
     }
 }
 
+const getOneProductoMarca = async (req,res) =>{
+    try {
+        const obtenerUnoMarca = await Productos.find({marca:req.params.marca});
+        res.json(obtenerUnoMarca);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const postProductos = async (req,res) =>{
     const agregar = new Productos(req.body);
     try {
@@ -55,4 +64,4 @@ const updateProducto = async (req,res) =>{
 
 
 
-export {getProductos , getOneProducto, postProductos, deleteProductos, updateProducto };
+export {getProductos , getOneProducto, postProductos, deleteProductos, updateProducto , getOneProductoMarca };

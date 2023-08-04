@@ -1,4 +1,4 @@
-import { getProductos, getOneProducto , postProductos , deleteProductos , updateProducto } from "../controllers/productos.controllers.js";
+import { getProductos, getOneProducto , postProductos , deleteProductos , updateProducto , getOneProductoMarca} from "../controllers/productos.controllers.js";
 import {Router} from "express";
 import {check} from "express-validator";
 import validateDocuments from '../middlewares/validate.documents.js';
@@ -10,10 +10,10 @@ const router = Router();
 router.get("/get", getProductos);
 router.post("/add",[
     check('nombre_producto','nombre es requierido').not().isEmpty(),
-    check('nombre_marca').custom(async(nombre_marca='')=>{
-        const existeMarca = await Marca.findOne({nombre_marca});
+    check('marca').custom(async(marca='')=>{
+        const existeMarca = await Marca.findOne({marca});
         if(!existeMarca){
-            throw new Error(`La marca ${nombre_marca} no está registrada en la base de datos`)
+            throw new Error(`La marca ${marca} no está registrada en la base de datos`)
         }
     }),
     check('categoria').custom(async(nombre='')=>{
@@ -26,6 +26,8 @@ router.post("/add",[
 
 router.delete("/del", deleteProductos);
 router.patch("/upd", updateProducto);
+router.get("/one/:marca",getOneProductoMarca);
+
 
 export default router;
 
