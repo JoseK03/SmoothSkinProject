@@ -51,6 +51,10 @@
        </div>
        <section class="sectionProductos">
             <div class="caja" id="caja">
+                <div class="tarjeta tarjetaAgregar">
+                    <h5>Agregar Producto</h5>
+                    <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#agregarProducto" data-bs-whatever="@mdo"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
                 <div class="tarjeta">
                     <a href="./productoDetallado.html">
                         <img src="../../../assets/imgs/ordinary/Acido-hyaluronico.png"  alt="Smooth skin image">
@@ -71,6 +75,66 @@
             </div>
        </section>
     </main>
+    
+
+    <div class="modal fade" id="agregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">NUEVO PRODUCTO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div class="mb-3">
+                <label for="nombreProducto" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombreProducto">
+            </div>
+            <div class="mb-3">
+                <label for="nombreMarca" class="col-form-label">Marca:</label>
+                <input type="text" class="form-control" id="nombreMarca">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="col-form-label">Descripcion:</label>
+                <input type="text" class="form-control" id="descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="uso1" class="col-form-label">Uso1:</label>
+                <input type="text" class="form-control" id="uso1">
+            </div>
+            <div class="mb-3">
+                <label for="uso2" class="col-form-label">Uso2:</label>
+                <input type="text" class="form-control" id="uso2">
+            </div>
+            <div class="mb-3">
+                <label for="precioCruzVerde" class="col-form-label">Precio Cruz Verde:</label>
+                <input type="text" class="form-control" id="precioCruzVerde">
+            </div>
+            <div class="mb-3">
+                <label for="precioFarmatodo" class="col-form-label">Precio Farmatodo:</label>
+                <input type="text" class="form-control" id="precioFarmatodo">
+            </div>
+            <div class="mb-3">
+                <label for="precioMedipiel" class="col-form-label">Precio Medipiel:</label>
+                <input type="text" class="form-control" id="precioMedipiel">
+            </div>
+            <div class="mb-3">
+                <label for="precioPiel" class="col-form-label">Precio Piel:</label>
+                <input type="text" class="form-control" id="precioPiel">
+            </div>
+            <div class="mb-3">
+                <label for="precioBellaPiel" class="col-form-label">Precio BellaPiel:</label>
+                <input type="text" class="form-control" id="precioBellaPiel">
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">agregar</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <footer>
 
