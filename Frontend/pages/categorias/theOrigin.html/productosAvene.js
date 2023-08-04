@@ -17,7 +17,7 @@ async function mostrarProductosAvene() {
                         <img src="../../../assets/imgs/avene/AguaTermal.png"  alt="Imagen de piel suave">
                     <div class="infoTarjeta">
                         <h6>${nombre_producto}</h6>
-                        <p>${marca}</p>
+                        <p>${precios[0].precio_cruz_verde}</p>
                     </div>
                     </a>
                 </div>
