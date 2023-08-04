@@ -291,4 +291,7 @@ li a{
     color: #809F99;
 }
 
-
+.modal-dialog {
+    max-width: 60% !important;
+    max-height: 50% !important;
+}

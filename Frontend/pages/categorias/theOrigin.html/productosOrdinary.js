@@ -21,6 +21,32 @@ async function mostrarProductos() {
                     </div>
                     </a>
                 </div>
-        `}})}
+        `}})
+}
+
+async function sendInfo(){
+    const formAgregarProducto = document.querySelector('#formAgregarProducto');
+    const nombreProducto = document.querySelector('#nombreProducto');
+    const descripcionProducto = document.querySelector('#descripcion');
+    const usoUno = document.querySelector('#uso1');
+    const usoDos = document.querySelector('#uso2');
+    const precioCruzVerde = documente.querySelector('#precioCruzVerde');
+    const precioFarmatodo = document.querySelector('#precioFarmatodo');
+    const precioMedipiel = document.querySelector('#precioMedipiel');
+    const precioPiel = document.querySelector('#precioPiel');
+    const precioBellaPiel = document.querySelector('#precioBellaPiel');
+
+
+    formAgregarProducto.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const data = {
+            /* los de la izquierda debe estar igual al como estan nombradas en la base de datos
+             */
+            nombre : nombreProducto.value,
+            descripcion : descripcionProducto.value,
+
+        }
+    })
+}
 
             
