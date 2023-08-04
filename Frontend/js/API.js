@@ -20,3 +20,13 @@ export async function getOneProducto(marca){
         console.log(error);
     }
 }
+
+export async function getUnproducto(id){
+    try {
+        const detalleProducto = await fetch(`${urlProductos}/uno/${id}`);
+        console.log(detalleProducto);
+        return detalleProducto.json();
+    } catch (error) {
+        
+    }
+}

@@ -1,10 +1,10 @@
 import {getAllProductos} from "../../../js/API.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos();
+    mostrarProductosAvene();
 });
 
-async function mostrarProductos() {
+async function mostrarProductosAvene() {
     const data = await getAllProductos();
     data.forEach((producto,index) => {
         const { _id, nombre_producto, marca, descripcion, precios } = producto;
@@ -14,7 +14,7 @@ async function mostrarProductos() {
             bodycard.innerHTML += `
                 <div class="tarjeta">
                     <a href="./acidoHyaluronico.html">
-                        <img src="../../../assets/imgs/ordinary/Acido-hyaluronico.png"  alt="Imagen de piel suave">
+                        <img src="../../../assets/imgs/avene/AguaTermal.png"  alt="Imagen de piel suave">
                     <div class="infoTarjeta">
                         <h6>${nombre_producto}</h6>
                         <p>${marca}</p>

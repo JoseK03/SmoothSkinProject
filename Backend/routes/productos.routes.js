@@ -27,6 +27,7 @@ router.post("/add",[
 router.delete("/del", deleteProductos);
 router.patch("/upd", updateProducto);
 router.get("/one/:marca",getOneProductoMarca);
+router.get("/uno/:id",getOneProducto)
 
 
 export default router;

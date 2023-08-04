@@ -1,23 +1,22 @@
 import {getAllProductos} from "../../../js/API.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos();
+    mostrarProductosBioderma();
 });
 
-async function mostrarProductos() {
+async function mostrarProductosBioderma() {
     const data = await getAllProductos();
     data.forEach((producto,index) => {
         const { _id, nombre_producto, marca, descripcion, precios } = producto;
         if (marca == "Bioderma") {
             const bodycard = document.getElementById('cajaBioderma');
-            const precioMasEconomico = Math.min(...precios.map(precio => precio.valor));
             bodycard.innerHTML += `
                 <div class="tarjeta">
-                    <a href="./acidoHyaluronico.html">
-                        <img src="../../../assets/imgs/ordinary/Acido-hyaluronico.png"  alt="Imagen de piel suave">
+                    <a href="./productoDetallado.html">
+                        <img src="../../../assets/imgs/bioderma/shampu-anti-caspa.png"  alt="Imagen de piel suave">
                     <div class="infoTarjeta">
                         <h6>${nombre_producto}</h6>
-                        <p>${marca}</p>
+                        <p>${precios.length}</p>
                     </div>
                     </a>
                 </div>

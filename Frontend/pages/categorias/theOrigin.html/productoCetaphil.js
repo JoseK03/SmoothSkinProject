@@ -1,10 +1,10 @@
 import {getAllProductos} from "../../../js/API.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos();
+    mostrarProductosCetaphil();
 });
 
-async function mostrarProductos() {
+async function mostrarProductosCetaphil() {
     const data = await getAllProductos();
     data.forEach((producto,index) => {
         const { _id, nombre_producto, marca, descripcion, precios } = producto;
