@@ -13,7 +13,7 @@ async function mostrarProductosBioderma() {
             bodycard.innerHTML += `
                 <div class="tarjeta">
                     <a href="./productoDetallado.html">
-                        <img src="../../../assets/imgs/bioderma/shampu-anti-caspa.png"  alt="Imagen de piel suave">
+                        <img src="../../../assets/imgs/bioderma/cuidadodia.png"  alt="Imagen de piel suave">
                     <div class="infoTarjeta">
                         <h6>${nombre_producto}</h6>
                         <p>${precios.length}</p>
