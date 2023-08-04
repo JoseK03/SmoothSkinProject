@@ -12,12 +12,12 @@ const getOneCategoria = async (req,res) =>{
 }
 
 const postCategoria = async (req,res) =>{
-    const añadir = new Categorias.send();
+    const añadir = new Categorias(req.body);
     try {
-        const nueva = añadir.save();
-        res.json(nueva);
+        const nueva = await añadir.save();
+        res.json(nueva)
     } catch (error) {
-        console.log(error);
+        console.log("error");
     };
 }
 

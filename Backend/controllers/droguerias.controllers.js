@@ -11,9 +11,9 @@ const getUnaDrogueria = async (req,res) =>{
 }
 
 const postDrogueria = async (req,res) =>{
-    const agregar = new Droguerias.send();
+    const agregar = new Droguerias(req.body);
     try {
-        const nueva = agregar.save();
+        const nueva = await agregar.save();
         res.json(nueva);
     } catch (error) {
         console.log(error);

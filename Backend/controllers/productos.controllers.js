@@ -15,9 +15,9 @@ const getOneProducto = async (req,res) =>{
 }
 
 const postProductos = async (req,res) =>{
-    const agregar = await Productos.send();
+    const agregar = new Productos(req.body);
     try {
-        const nuevo = agregar.save();
+        const nuevo = await agregar.save();
         res.json(nuevo);
     } catch (error) {
         console.log(error);

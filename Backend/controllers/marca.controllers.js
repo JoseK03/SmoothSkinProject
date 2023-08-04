@@ -11,7 +11,7 @@ const getUnaMarcar = async (req,res) =>{
 }
 
 const postMarca = async (req,res) =>{
-    const nuevaMarca = new Marca.send();
+    const nuevaMarca = new Marca(req.body);
     try {
         const agregar = await nuevaMarca.save();
         res.json(agregar);
