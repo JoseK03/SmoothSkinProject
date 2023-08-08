@@ -126,12 +126,21 @@
                 <label for="precioBellaPiel" class="col-form-label">Precio BellaPiel:</label>
                 <input type="number" class="form-control" id="precioBellaPiel">
             </div>
+            <div class="mb-3">
+                <label for="categoriaProducto" class="col-form-label">Categoria:</label>
+                <input type="text" class="form-control" id="categoriaProducto">
+            </div>
+            <div class="mb-3">
+                <label for="imagenProducto" class="col-form-label">Imagen:</label>
+                <input type="text" class="form-control" id="imagenProducto">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">agregar</button>
+            </div>
             </form>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">agregar</button>
-        </div>
+        
         </div>
     </div>
     </div>
@@ -139,6 +148,7 @@
     <footer>
 
         <script type="module" src="./productosOrdinary.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </footer>
 </body>
 </html>

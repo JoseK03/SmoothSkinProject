@@ -1,4 +1,4 @@
-import {getAllProductos} from "../../../js/API.js";
+import {getAllProductos, insertProducto} from "../../../js/API.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     mostrarProductos();
@@ -22,19 +22,25 @@ async function mostrarProductos() {
                     </a>
                 </div>
         `}})
-}
+
+        //? LLAMAR FUNCIONES
+        sendInfo();
+    }
 
 async function sendInfo(){
     const formAgregarProducto = document.querySelector('#formAgregarProducto');
     const nombreProducto = document.querySelector('#nombreProducto');
+    const nombreMarca = document.querySelector('#nombreMarca');
     const descripcionProducto = document.querySelector('#descripcion');
     const usoUno = document.querySelector('#uso1');
     const usoDos = document.querySelector('#uso2');
-    const precioCruzVerde = documente.querySelector('#precioCruzVerde');
+    const precioCruzVerde = document.querySelector('#precioCruzVerde');
     const precioFarmatodo = document.querySelector('#precioFarmatodo');
     const precioMedipiel = document.querySelector('#precioMedipiel');
     const precioPiel = document.querySelector('#precioPiel');
     const precioBellaPiel = document.querySelector('#precioBellaPiel');
+    const categoriaProducto = document.querySelector('#categoriaProducto');
+    const imagenProducto = document.querySelector('#imagenProducto');
 
 
     formAgregarProducto.addEventListener('submit',(e)=>{
@@ -42,9 +48,20 @@ async function sendInfo(){
         const data = {
             /* los de la izquierda debe estar igual al como estan nombradas en la base de datos
              */
-            nombre : nombreProducto.value,
+            nombre_producto : nombreProducto.value,
+            marca:nombreMarca.value,
             descripcion : descripcionProducto.value,
+            usos:[usoUno.value,usoDos.value],
+            precios:[precioCruzVerde.value,precioFarmatodo.value,precioMedipiel.value,precioPiel.value,precioBellaPiel.value],
+            categoria : [categoriaProducto.value],
+            imagen: imagenProducto.value
+        }
 
+        if(insertProducto(data)){
+            swal("Datos enviados satisfactoriamente", "¡Enviado!", "success");
+            setTimeout(()=>{
+                window.location ='origin.html';
+            },2000);
         }
     })
 }

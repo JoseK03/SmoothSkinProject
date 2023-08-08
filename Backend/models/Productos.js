@@ -24,6 +24,11 @@ const productoSchema = mongoose.Schema({
     categoria:{
         type:Array,
         required:true
+    },
+    imagen:{
+        type: String,
+        required:true,
+        default:'azelaic.png'
     }
     },
     {

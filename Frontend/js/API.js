@@ -30,3 +30,20 @@ export async function getUnproducto(id){
         
     }
 }
+
+export async function insertProducto(data){
+    try {
+        const producto = await fetch(`${urlProductos}/add`,{
+            method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        });
+
+        const response = await producto.json();
+        return response;
+    } catch (error) {
+        
+    }
+}
