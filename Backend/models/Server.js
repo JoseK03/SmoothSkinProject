@@ -4,6 +4,7 @@ import productosRouter from "../routes/productos.routes.js";
 import marcaRouter from "../routes/marcas.routes.js";
 import drogueriasRouter from "../routes/droguerias.routes.js";
 import categoriasRouter from "../routes/categorias.routes.js";
+import usuariosRouter from "../routes/usuarios.routes.js";
 
 class Server{
 
@@ -15,6 +16,7 @@ class Server{
         this.marcaPath = "/api/marcas";
         this.drogueriasPath = "/api/droguerias";
         this.categoriasPath = "/api/categorias";
+        this.usuariosPath = "/api/usuarios";
         this.middlewares();
         this.routes();
     }
@@ -30,6 +32,7 @@ class Server{
         this.app.use(this.marcaPath,marcaRouter);
         this.app.use(this.drogueriasPath,drogueriasRouter);
         this.app.use(this.categoriasPath,categoriasRouter);
+        this.app.use(this.usuariosPath,usuariosRouter);
 
     }
 
