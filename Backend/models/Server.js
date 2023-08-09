@@ -12,11 +12,13 @@ class Server{
         this.app = express();
         
         this.port = process.env.PORT;
+        this.usuariosPath = "/api/usuarios";
+        this.authPath = "/api/auth";
         this.productosPath = "/api/productos";
         this.marcaPath = "/api/marcas";
         this.drogueriasPath = "/api/droguerias";
         this.categoriasPath = "/api/categorias";
-        this.usuariosPath = "/api/usuarios";
+
         this.middlewares();
         this.routes();
     }
@@ -33,6 +35,7 @@ class Server{
         this.app.use(this.drogueriasPath,drogueriasRouter);
         this.app.use(this.categoriasPath,categoriasRouter);
         this.app.use(this.usuariosPath,usuariosRouter);
+        this.app.use(this.authPath,authRouter);
 
     }
 
